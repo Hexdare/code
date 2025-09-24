@@ -4,6 +4,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel
 from passlib.context import CryptContext
 from datetime import datetime, timedelta, timezone
+from typing import Optional
 import jwt
 import os
 
