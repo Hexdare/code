@@ -14,6 +14,18 @@
       "use": "@vercel/python"
     },
     {
+      "src": "api/qr/generate.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/attendance/mark.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/timetable/index.py",
+      "use": "@vercel/python"
+    },
+    {
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
@@ -34,6 +46,18 @@
     {
       "src": "/api/auth/me", 
       "dest": "/api/auth/me.py"
+    },
+    {
+      "src": "/api/qr/generate",
+      "dest": "/api/qr/generate.py"
+    },
+    {
+      "src": "/api/attendance/mark",
+      "dest": "/api/attendance/mark.py"
+    },
+    {
+      "src": "/api/timetable",
+      "dest": "/api/timetable/index.py"
     },
     {
       "handle": "filesystem"
