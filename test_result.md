@@ -237,13 +237,11 @@ metadata:
 
 test_plan:
   current_focus:
-    - "User Authentication System"
-    - "QR Code Generation"
     - "Authentication UI"
     - "Teacher Dashboard"
     - "Student Dashboard"
   stuck_tasks: []
-  test_all: true
+  test_all: false
   test_priority: "high_first"
 
 agent_communication:
