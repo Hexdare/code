@@ -18,7 +18,15 @@
       "use": "@vercel/python"
     },
     {
+      "src": "api/qr/sessions.py",
+      "use": "@vercel/python"
+    },
+    {
       "src": "api/attendance/mark.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/attendance/records.py",
       "use": "@vercel/python"
     },
     {
