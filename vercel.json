@@ -2,22 +2,38 @@
   "version": 2,
   "builds": [
     {
-      "src": "backend/server.py",
+      "src": "api/auth/register.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/auth/login.py", 
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/auth/me.py",
       "use": "@vercel/python"
     },
     {
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "workPath": "frontend",
-        "distDir": "build"
+        "buildCommand": "cd frontend && yarn build",
+        "outputDirectory": "frontend/build"
       }
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "backend/server.py"
+      "src": "/api/auth/register",
+      "dest": "/api/auth/register.py"
+    },
+    {
+      "src": "/api/auth/login",
+      "dest": "/api/auth/login.py"
+    },
+    {
+      "src": "/api/auth/me", 
+      "dest": "/api/auth/me.py"
     },
     {
       "handle": "filesystem"
@@ -26,5 +42,9 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ]
+  ],
+  "env": {
+    "MONGO_URL": "@mongo_url",
+    "DB_NAME": "@db_name"
+  }
 }
