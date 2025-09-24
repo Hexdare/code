@@ -60,8 +60,16 @@
       "dest": "/api/qr/generate.py"
     },
     {
+      "src": "/api/qr/sessions",
+      "dest": "/api/qr/sessions.py"
+    },
+    {
       "src": "/api/attendance/mark",
       "dest": "/api/attendance/mark.py"
+    },
+    {
+      "src": "/api/attendance/records",
+      "dest": "/api/attendance/records.py"
     },
     {
       "src": "/api/timetable",
